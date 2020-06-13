@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ItemList from 'components/ItemList';
+import Sidebar from 'components/Sidebar';
 import './styles/App.scss';
 
 function App() {
+  const [site, setSite] = useState('vstorrent.org');
+
   return <>
     <header>
       <h1>skimm</h1>
@@ -9,23 +13,11 @@ function App() {
 
     <main>
       <div className="frame">
-        <section id="sidebar">
-          <select>
-            <option selected>vstorrent.org</option>
-          </select>
+        <Sidebar site={site} setSite={setSite} />
 
-          <form className="inline-form">
-            <input type="text" />
-            <input type="submit" />
-          </form>
-
-          <hr />
-
-          <button type="button">test 1</button>
-          <button type="button">test 2</button>
+        <section id="content">
+          <ItemList site={site} />
         </section>
-
-        <section id="content"></section>
       </div>
     </main>
   </>;
