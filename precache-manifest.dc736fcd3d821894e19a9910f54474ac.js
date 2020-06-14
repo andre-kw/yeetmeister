@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "515e4ee85427dbe9fbf18eadc5fff011",
+    "revision": "3eeca32a196e2f0aae080bd808d7a967",
     "url": "/yeetmeister/index.html"
   },
   {
-    "revision": "c09365a9fecb8a5b8999",
-    "url": "/yeetmeister/static/css/main.e0af4122.chunk.css"
+    "revision": "95ae10b23d1127ae4f7e",
+    "url": "/yeetmeister/static/css/main.66fb7f3f.chunk.css"
   },
   {
     "revision": "c9736900563a18565698",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yeetmeister/static/js/2.4b7d7bc6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c09365a9fecb8a5b8999",
+    "revision": "95ae10b23d1127ae4f7e",
     "url": "/yeetmeister/static/js/main.41087dc7.chunk.js"
   },
   {
