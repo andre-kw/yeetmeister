@@ -1,6 +1,6 @@
 {
-  "name": "swipper-5000",
-  "version": "0.1.0",
+  "name": "yeetmeister",
+  "version": "5000.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
