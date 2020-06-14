@@ -112,7 +112,7 @@ input[type="submit"], button {
 }
 
 #content {
-  min-width: 34em;
+  width: 34em;
   max-height: 35em;
   flex: 5 1;
   background: $main-bg;
@@ -122,6 +122,13 @@ input[type="submit"], button {
   border-bottom-width: 8px;
   border-radius: 1px 1px 0 10px;
   color: $main-fg;
+}
+
+#main-footer {
+  margin-top: 1em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 0.8em;
 }
 
 .inline-form {

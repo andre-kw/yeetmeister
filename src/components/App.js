@@ -40,6 +40,10 @@ function App() {
             </section>
           </div>
         </main>
+
+        <footer id="main-footer">
+          <small>© {new Date().getFullYear()} andre k w</small>
+        </footer>
       </div>
     </div>
   );

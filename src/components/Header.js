@@ -1,7 +1,6 @@
 import React from 'react';
 import AppContext from 'components/AppContext';
 import './styles/Header.scss';
-import './styles/ShineShit.scss';
 
 export default function Header(props) {
   const ctx = React.useContext(AppContext);
