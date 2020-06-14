@@ -5,9 +5,9 @@ $main-bg: #e4debc;
 $main-fg: #736621;
 $main-accent-1: #9b8c40;
 $main-accent-2: #dadada;
-$theme2-bg: #bce4dd;
-$theme2-fg: #214e73;
-$theme2-accent-1: #409b80;
+$theme2-bg: #e6e6e6;
+$theme2-fg: #24726b;
+$theme2-accent-1: #59178b;
 $theme2-accent-2: #68a391;
 $theme3-bg: #2b2b2b;
 $theme3-fg: #969696;
@@ -106,7 +106,7 @@ input[type="submit"], button {
 }
 
 #sidebar {
-  max-width: 15em;
+  width: 13em;
   padding: 0 1em;
   display: flex;
   flex-direction: column;
@@ -183,7 +183,7 @@ input[type="submit"], button {
 }
 
 #icon-theme-two {
-  background: $theme2-bg !important;
+  background: $theme2-accent-2 !important;
   border-color: $theme2-accent-1 !important;
 }
 
@@ -292,6 +292,10 @@ input[type="submit"], button {
   #pager-search input[type="text"] {
     border-color: $theme2-fg;
     color: $theme2-fg;
+  }
+
+  #main-header h1 {
+    color: $theme2-accent-1;
   }
 }
 
