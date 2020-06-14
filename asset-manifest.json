@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yeetmeister/static/css/main.5fdb9484.chunk.css",
+    "main.js": "/yeetmeister/static/js/main.41087dc7.chunk.js",
+    "main.js.map": "/yeetmeister/static/js/main.41087dc7.chunk.js.map",
+    "runtime-main.js": "/yeetmeister/static/js/runtime-main.4b64e005.js",
+    "runtime-main.js.map": "/yeetmeister/static/js/runtime-main.4b64e005.js.map",
+    "static/js/2.4b7d7bc6.chunk.js": "/yeetmeister/static/js/2.4b7d7bc6.chunk.js",
+    "static/js/2.4b7d7bc6.chunk.js.map": "/yeetmeister/static/js/2.4b7d7bc6.chunk.js.map",
+    "index.html": "/yeetmeister/index.html",
+    "precache-manifest.1914b910df2b0a644d48465c9f389412.js": "/yeetmeister/precache-manifest.1914b910df2b0a644d48465c9f389412.js",
+    "service-worker.js": "/yeetmeister/service-worker.js",
+    "static/css/main.5fdb9484.chunk.css.map": "/yeetmeister/static/css/main.5fdb9484.chunk.css.map",
+    "static/js/2.4b7d7bc6.chunk.js.LICENSE.txt": "/yeetmeister/static/js/2.4b7d7bc6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b64e005.js",
+    "static/js/2.4b7d7bc6.chunk.js",
+    "static/css/main.5fdb9484.chunk.css",
+    "static/js/main.41087dc7.chunk.js"
+  ]
+}
