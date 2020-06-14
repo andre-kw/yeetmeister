@@ -184,21 +184,23 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
     flex: 1;
   }
 
-  & > div:nth-child(2) {
-    flex: 3;
-    text-align: center;
-  }
-
   & > div:nth-child(3) {
     text-align: right;
   }
 }
 
+.pager-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #pager-search input[type="text"] {
+  max-width: 2em;
   border-color: #fff;
+  margin: 0 .5em;
   background-color: transparent;
   color: #fff;
-  max-width: 3em;
 }
 
 .loader {

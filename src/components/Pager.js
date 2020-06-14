@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Pager(props) {
+  const {pageNumber} = props;
+  const [pageNumberInput, setPageNumberInput] = useState(props.pageNumber);
   const prevBtn = <button type="button" onClick={e => props.setPageNumber(props.pageNumber - 1)}>{props.pageNumber - 1}</button>;
+
+  React.useEffect(() => {
+    setPageNumberInput(pageNumber);
+  }, [pageNumber]);
 
   const inputPageNumber = (e) => {
     e.preventDefault();
@@ -17,16 +23,17 @@ export default function Pager(props) {
     <div className={`pager ${props.hide ? 'hide' : ''}`}>
       <div><small>hey</small></div>
 
-      <div>
+      <div className="pager-center">
         {props.pageNumber > 1 && [prevBtn, <span>... </span>]}
-        <span>{props.pageNumber} ...</span>
+        <form id="pager-search" onSubmit={inputPageNumber}>
+          <input name="pagenum" type="text" value={pageNumberInput} onChange={(e) => setPageNumberInput(e.target.value)} />
+        </form>
+        <span>...</span>
         <button type="button" onClick={e => props.setPageNumber(props.pageNumber + 1)}>{props.pageNumber + 1}</button>
       </div>
 
       <div>
-        <form id="pager-search" onSubmit={inputPageNumber}>
-          <input name="pagenum" type="text" />
-        </form>
+        
       </div>
     </div>
   );
