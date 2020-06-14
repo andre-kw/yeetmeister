@@ -30,6 +30,7 @@ const FetchService = {
         fullTitle,
         img: 'https://cors-anywhere.herokuapp.com/' + post.querySelector('.wp-post-image').getAttribute('src'),
         date: post.querySelector('span.date').textContent.trim(),
+        href: post.querySelector('.entry-title a').getAttribute('href'),
         formats,
         systems,
       };
