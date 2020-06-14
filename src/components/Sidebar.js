@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ItemPreview from 'components/ItemPreview';
+import './styles/Sidebar.scss';
 
 export default function Sidebar(props) {
   return (

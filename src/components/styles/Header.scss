@@ -13,6 +13,7 @@
   position: relative;
 
   sup {
+    margin-left: -0.5em;
     font-size: 0.3em;
   }
 }
@@ -85,7 +86,7 @@ $bgr-color: #333;
     color: #fff;
 
     &:after {
-      width: 15em;
+      width: 24em;
       height: 4em;
       content: ' ';
       display: block;
@@ -93,10 +94,9 @@ $bgr-color: #333;
       top: -1em;
       left: -1em;
       background-image: url(/img/solo.png);
-      background-size: 58%;
+      background-size: 35%;
       background-repeat: no-repeat;
       z-index: -20;
-      // filter: hue-rotate(-195deg);
       pointer-events: none;
     }
   }

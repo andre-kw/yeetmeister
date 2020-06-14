@@ -1,0 +1,52 @@
+#sidebar-preview > div {
+  & > .btn, & > button {
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center 58%;
+    user-select: none;
+  }
+}
+
+#sidebar-preview > div > .btn-google {
+  background-image: url(/img/google.png);
+  background-size: 75%;
+  background-color: #f5f5f5;
+}
+
+#sidebar-preview > div > .btn-magnet {
+  background-image: url(/img/magnet.png);
+  background-size: 23%;
+  background-color: rgba(167, 140, 140, 0.15);
+}
+
+#sidebar {
+  width: 13em;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  z-index: 5;
+
+  select, form, button {
+    margin-bottom: .75em;
+  }
+
+  h2 {
+    margin: 0 0 1em;
+    font-size: 1em;
+  }
+}
+
+#sidebar-preview {
+  width: 100%;
+
+  button, .btn {
+    margin-right: .5em;
+  }
+}
+
+.theme-three, .theme-four {
+  #sidebar-preview {
+    color: #fff;
+  }
+}
