@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ItemPreview from 'components/ItemPreview';
 
 export default function Sidebar(props) {
   return (
@@ -11,15 +12,13 @@ export default function Sidebar(props) {
         <input type="text" />
         <input type="submit" />
       </form>
-
       <hr />
 
+      <ItemPreview item={props.selectedItem} />
+      <hr />
+      
       <button type="button">test 1</button>
       <button type="button">test 2</button>
-
-      <hr />
-
-      <h2>{props.selectedItem.title}</h2>
     </section>
   );
 }

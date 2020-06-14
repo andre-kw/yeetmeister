@@ -15,10 +15,23 @@ const FetchService = {
     const posts = Array.from(doc.querySelectorAll('article.post'));
 
     return posts.map(post => {
+      const fullTitle = post.querySelector('h2.entry-title').textContent.trim();
+      const formatsStr = fullTitle.match(/\([^()]*\)/g, '');
+      const systemsStr = fullTitle.match(/\[[^()]*\]/g, '');
+      const formats = formatsStr ? formatsStr[0].slice(1, -1).split(',') : [];
+      const systems = systemsStr ? systemsStr[0].slice(1, -1).split('.') : [];
+
+      const title = fullTitle
+        .replace(/\[[^()]*\]/, '')
+        .replace(/\([^()]*\)/, '');
+        
       return {
-        title: post.querySelector('h2.entry-title').textContent.trim(),
+        title,
+        fullTitle,
         img: 'https://cors-anywhere.herokuapp.com/' + post.querySelector('.wp-post-image').getAttribute('src'),
-        date: '',
+        date: post.querySelector('span.date').textContent.trim(),
+        formats,
+        systems,
       };
     });
 

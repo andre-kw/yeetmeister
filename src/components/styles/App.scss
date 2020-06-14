@@ -10,7 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input, select, button {
+input, select, button, .btn {
   padding: 6px 8px;
   font-size: .7em;
   border: 1px solid #9a8d40;
@@ -19,11 +19,15 @@ input, select, button {
   outline: none;
   border-bottom-width: 3px;
   color: #6d6014;
+  text-decoration: none;
 
   &:focus, &:active {
     border-color: #2baf2b;
+    text-decoration: underline;
   }
 }
+
+input:focus, input:active { text-decoration: none; }
 
 button:focus, input[type="submit"]:focus {
   text-decoration: underline;
@@ -49,7 +53,6 @@ input[type="submit"], button {
 
 .frame {
   display: flex;
-  min-height: 75vh;
 }
 
 #main-header h1 {
@@ -74,16 +77,21 @@ input[type="submit"], button {
   }
 
   h2 {
-    margin: 0;
+    margin: 0 0 1em;
     font-size: 1em;
   }
 }
 
 #sidebar-preview {
   width: 100%;
+
+  button, .btn {
+    margin-right: .5em;
+  }
 }
 
 #content {
+  max-height: 35em;
   flex: 5 1;
   background: #232323;
   position: relative;

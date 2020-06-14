@@ -44,6 +44,9 @@ export default function ItemList(props) {
         <Item
           key={`item-${index}`}
           title={item.title}
+          fullTitle={item.fullTitle}
+          formats={item.formats}
+          systems={item.systems}
           date={item.date}
           selectItem={() => props.setItem(item)} />)}
     </ul>
@@ -51,22 +54,13 @@ export default function ItemList(props) {
 }
 
 function Item(props) {
-  const formatsStr = props.title.match(/\([^()]*\)/g, '');
-  const systemsStr = props.title.match(/\[[^()]*\]/g, '');
-  const formats = formatsStr ? formatsStr[0].slice(1, -1).split(',') : [];
-  const systems = systemsStr ? systemsStr[0].slice(1, -1).split('.') : [];
-
-  const title = props.title
-    .replace(/\[[^()]*\]/, '')
-    .replace(/\([^()]*\)/, '');
-
   return (
     <li>
       <a href="#" onClick={props.selectItem}>
-        <p id="item-title">{title} <span>• {props.date}</span></p>
+        <p id="item-title">{props.title} <span>• {props.date}</span></p>
 
         <p id="item-systems">
-          {systems.map((str, index) => {
+          {props.systems.map((str, index) => {
             const osName = str.split(' ')[0].toLowerCase();
 
             return <span className={`icon icon-${osName}`} key={`icon-${index}`}></span>;
@@ -74,7 +68,7 @@ function Item(props) {
         </p>
 
         <p className="badges">
-          {formats.map((str, index) => {
+          {props.formats.map((str, index) => {
             const formatName = str.toLowerCase().trim();
 
             return <span className={`badge-${formatName}`} key={`badge-${index}`}>{str}</span>;
