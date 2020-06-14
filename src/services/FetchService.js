@@ -5,11 +5,8 @@ const FetchService = {
       referrerPolicy: 'unsafe-url',
     };
     
-    return fetch(url, opts)
-      .then(res => {
-        console.log(res);
-        return res.text();
-      });
+    return fetch('https://cors-anywhere.herokuapp.com/' + url)
+      .then(res => res.text());
   },
 
   serializeVSTorrent(html) {
@@ -17,13 +14,15 @@ const FetchService = {
     const doc = parser.parseFromString(html, 'text/html');
     const posts = Array.from(doc.querySelectorAll('article.post'));
 
-    // return posts.map(post => {
-    //   return {
-    //     title: post.querySelector('h2.entry-title').textContent.trim(),
-    //   };
-    // });
+    return posts.map(post => {
+      return {
+        title: post.querySelector('h2.entry-title').textContent.trim(),
+        img: 'https://cors-anywhere.herokuapp.com/' + post.querySelector('.wp-post-image').getAttribute('src'),
+        date: '',
+      };
+    });
 
-    return [
+    /*return [
       {title: 'Audio Damage – AD046 Quanta 1.1.6 (VSTi, VSTi3, AAX, AUi) [WIN.OSX.LINUX x86 x64]', date: 'June 10, 2020'},
       {title: 'Impulse Record & Wave Arts – Convology XT Complete 1.18 (VST, VST3, AAX) [WiN x64]', date: 'June 10, 2020'},
       {title: 'Electronik Sound Lab – Drumart 1.1.0 (VSTi, AUi) [WIN.OSX x64]', date: 'June 10, 2020'},
@@ -38,7 +37,7 @@ const FetchService = {
       {title: 'Electronik Sound Labs – ESL-Pads 1.1.0 (VSTi3, AUi) [WIN.OSX x64]', date: 'June 10, 2020'},
       {title: 'Frontline Producer – Funk Rock Guitars (REX2, WAV)', date: 'June 10, 2020'},
       {title: 'TBProAudio – bundle 2020.6 (STANDALONE, VST, VST3, RTAS, AAX) [WiN x86 x64]', date: 'June 10, 2020'},
-    ];
+    ];*/
   },
 };
 

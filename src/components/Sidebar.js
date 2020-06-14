@@ -16,6 +16,12 @@ export default function Sidebar(props) {
 
       <button type="button">test 1</button>
       <button type="button">test 2</button>
+
+      <hr />
+
+      <figure id="sidebar-preview">
+        <img src={props.previewSrc} />
+      </figure>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import './styles/ItemList.scss';
 
 export default function ItemList(props) {
   const ctx = React.useContext(AppContext);
-  const [pageNumber, setPageNumber] = useState(1);
+  const {pageNumber} = props;
   const [items, setItems] = useState([]);
 
   const handleError = (err) => {
@@ -16,7 +16,7 @@ export default function ItemList(props) {
     let urlAppend;
 
     switch(props.site) {
-      case 'vstorrent.org': urlAppend = `page/${pageNumber}`; break;
+      case 'vstorrent.org': urlAppend = `page/${props.pageNumber}`; break;
     }
 
     ctx.setLoading(true);
@@ -33,6 +33,10 @@ export default function ItemList(props) {
   React.useEffect(() => {
     fetchItems();
   }, []);
+
+  React.useEffect(() => {
+    fetchItems();
+  }, [pageNumber]);
   
   return (
     <ul id="item-list">
@@ -40,7 +44,8 @@ export default function ItemList(props) {
         <Item
           key={`item-${index}`}
           title={item.title}
-          date={item.date} />)}
+          date={item.date}
+          setSrc={() => props.setPreviewSrc(item.img)} />)}
     </ul>
   );
 }
