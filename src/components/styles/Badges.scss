@@ -1,0 +1,53 @@
+.item-badges span {
+  margin-right: .5em;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 10px;
+}
+
+a:hover .item-badges span {
+  text-decoration: none;
+}
+
+span.badge-wav {
+  background: #caab08;
+  color: #715202;
+}
+
+span.badge-vst, span.badge-vsti {
+  background: #1f7e9e;
+  color: #fff;
+}
+
+span.badge-vst3, span.badge-vsti3 {
+  background: #40b4da;
+}
+
+span.badge-kontakt {
+  background: #2e632e;
+  color: #fff;
+}
+
+span.badge-vsti, span.badge-vsti3 {
+  font-style: italic;
+}
+
+.theme-two {
+  span.badge-wav {
+    background: #ffed8e;
+    color: #715202;
+  }
+  
+  span.badge-vst, span.badge-vsti {
+    background: #3db7e0;
+  }
+  
+  span.badge-vst3, span.badge-vsti3 {
+    background: #2a9ec5;
+  }
+  
+  span.badge-kontakt {
+    background: #2e632e;
+    color: #fff;
+  }
+}

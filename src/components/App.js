@@ -15,30 +15,32 @@ function App() {
 
   return (
     <div className={`theme-${ctx.theme}`}>
-      <Header />
+      <div id="container">
+        <Header />
 
-      <main>
-        <div className="frame">
-          <Sidebar 
-            site={site} 
-            setSite={setSite}
-            selectedItem={item} />
-
-          <section id="content">
-            <Loader />
-            
-            <ItemList 
+        <main>
+          <div className="frame">
+            <Sidebar 
               site={site} 
-              pageNumber={pageNumber}
-              setItem={setItem} />
+              setSite={setSite}
+              selectedItem={item} />
 
-            <Pager 
-              pageNumber={pageNumber} 
-              setPageNumber={setPageNumber}
-              hide={ctx.loading} />
-          </section>
-        </div>
-      </main>
+            <section id="content">
+              <Loader />
+              
+              <ItemList 
+                site={site} 
+                pageNumber={pageNumber}
+                setItem={setItem} />
+
+              <Pager 
+                pageNumber={pageNumber} 
+                setPageNumber={setPageNumber}
+                hide={ctx.loading} />
+            </section>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

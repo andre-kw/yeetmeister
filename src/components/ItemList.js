@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import FetchService from 'services/FetchService';
 import AppContext from 'components/AppContext';
 import './styles/ItemList.scss';
+import './styles/Badges.scss';
 
 export default function ItemList(props) {
   const ctx = React.useContext(AppContext);
@@ -57,9 +58,9 @@ function Item(props) {
   return (
     <li>
       <a href="#" onClick={props.selectItem}>
-        <p id="item-title">{props.title} <span>• {props.date}</span></p>
+        <p className="item-title">{props.title} <span>• {props.date}</span></p>
 
-        <p id="item-systems">
+        <p className="item-systems">
           {props.systems.map((str, index) => {
             const osName = str.split(' ')[0].toLowerCase();
 
@@ -67,11 +68,11 @@ function Item(props) {
           })}
         </p>
 
-        <p className="badges">
+        <p className="item-badges">
           {props.formats.map((str, index) => {
             const formatName = str.toLowerCase().trim();
 
-            return <span className={`badge-${formatName}`} key={`badge-${index}`}>{str}</span>;
+            return <span className={`badge badge-${formatName}`} key={`badge-${index}`}>{str}</span>;
           })}
         </p>
       </a>

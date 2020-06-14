@@ -4,9 +4,19 @@
 $main-bg: #e4debc;
 $main-fg: #736621;
 $main-accent-1: #9b8c40;
+$main-accent-2: #dadada;
+$theme2-bg: #bce4dd;
+$theme2-fg: #214e73;
+$theme2-accent-1: #409b80;
+$theme2-accent-2: #68a391;
+
+html {
+  height: 100vh;
+}
 
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -26,7 +36,7 @@ input, select, button, .btn {
   text-decoration: none;
 
   &:focus, &:active {
-    border-color: #dadada;
+    border-color: $main-accent-2;
     text-decoration: underline;
   }
 }
@@ -51,8 +61,13 @@ input[type="submit"], button {
 #root > div {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  margin: 4vh auto 0;
   max-width: 60em;
-  margin: 0 auto;
 }
 
 
@@ -70,26 +85,13 @@ input[type="submit"], button {
   background-color: #f5f5f5;
 }
 
-#main-header h1 {
-  font-family: 'Playfair Display SC', serif;
-  font-size: 5em;
-  margin: -0.25em 0 -0.35em 3%;
-  font-weight: 100;
-  z-index: -5;
-  position: relative;
-
-  sup {
-    font-size: 0.3em;
-  }
-}
-
 #sidebar {
   max-width: 15em;
   padding: 0 1em;
   display: flex;
   flex-direction: column;
-
   flex: 2;
+  z-index: 5;
 
   select, form, button {
     margin-bottom: .75em;
@@ -110,6 +112,7 @@ input[type="submit"], button {
 }
 
 #content {
+  min-width: 34em;
   max-height: 35em;
   flex: 5 1;
   background: $main-bg;
@@ -147,43 +150,14 @@ input[type="submit"], button {
 .icon-linux { background-image: url(/img/linux.png) }
 
 
-.badges span {
-  margin-right: .5em;
-  padding: 3px 8px;
-  background: rgba(0, 0, 0, .5);
-  border-radius: 10px;
+#icon-theme-one {
+  background: $main-bg !important;
+  border-color: $main-accent-1 !important;
 }
 
-a:hover .badges span {
-  text-decoration: none;
-}
-
-span.badge-wav {
-  background: #caab08;
-  color: #715202;
-}
-
-span.badge-vst, span.badge-vsti {
-  background: #1f7e9e;
-}
-
-span.badge-vst3, span.badge-vsti3 {
-  background: #40b4da;
-}
-
-span.badge-kontakt {
-  background: #2e632e;
-  color: #fff;
-}
-
-span.badge-vsti, span.badge-vsti3 {
-  font-style: italic;
-}
-
-span.badge-aax, span.badge-aui, span.badge-au,
-span.badge-rex2, span.badge-rtas, span.badge-exs {
-  color: gray;
-  background: #2d2d2d;
+#icon-theme-two {
+  background: $theme2-bg !important;
+  border-color: $theme2-accent-1 !important;
 }
 
 .pager {
@@ -262,7 +236,24 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
 .theme-two {
   background: linear-gradient(#e2e8ff, #e2e8ff);
   
-  #main-header, #sidebar {
-    filter: hue-rotate(180deg);
+  input, select, button, .btn {
+    border-color: $theme2-accent-1;
+    background: $theme2-bg;
+    color: $theme2-fg;
+  
+    &:focus, &:active {
+      border-color: $theme2-accent-1;
+    }
+  }
+
+  #content {
+    background: $theme2-bg;
+    border-color: $theme2-accent-1;
+    color: $theme2-fg;
+  }
+
+  #pager-search input[type="text"] {
+    border-color: $theme2-fg;
+    color: $theme2-fg;
   }
 }
