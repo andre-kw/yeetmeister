@@ -47,6 +47,8 @@ input[type="submit"], button {
 #root > div {
   width: 100vw;
   height: 100vh;
+  max-width: 60em;
+  margin: 0 auto;
 }
 
 
