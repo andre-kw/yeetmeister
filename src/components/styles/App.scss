@@ -1,6 +1,10 @@
 // @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500&family=Playfair+Display+SC:ital@1&display=swap');
 
+$main-bg: #e4debc;
+$main-fg: #736621;
+$main-accent-1: #9b8c40;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,12 +17,12 @@ body {
 input, select, button, .btn {
   padding: 6px 8px;
   font-size: .7em;
-  border: 1px solid #9a8d40;
+  border: 1px solid $main-accent-1;
   border-radius: 15px;
-  background: #e4debd;
+  background: $main-bg;
   outline: none;
   border-bottom-width: 3px;
-  color: #6d6014;
+  color: $main-fg;
   text-decoration: none;
 
   &:focus, &:active {
@@ -108,13 +112,13 @@ input[type="submit"], button {
 #content {
   max-height: 35em;
   flex: 5 1;
-  background: #232323;
+  background: $main-bg;
   position: relative;
   z-index: 5;
-  border: 1px solid #737373;
+  border: 1px solid $main-accent-1;
   border-bottom-width: 8px;
   border-radius: 1px 1px 0 10px;
-  color: #fff;
+  color: $main-fg;
 }
 
 .inline-form {
@@ -213,10 +217,10 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
 
 #pager-search input[type="text"] {
   max-width: 2em;
-  border-color: #fff;
+  border-color: $main-fg;
   margin: 0 .5em;
   background-color: transparent;
-  color: #fff;
+  color: $main-fg;
   text-align: center;
 }
 
