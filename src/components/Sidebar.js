@@ -19,9 +19,7 @@ export default function Sidebar(props) {
 
       <hr />
 
-      <figure id="sidebar-preview">
-        <img src={props.previewSrc} />
-      </figure>
+      <h2>{props.selectedItem.title}</h2>
     </section>
   );
 }

@@ -31,9 +31,9 @@ button:focus, input[type="submit"]:focus {
 
 hr {
   width: 100%;
-  margin: .5em auto 1.5em;
+  margin: .5em auto 1em;
   border: 0;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #cacaca;
 }
 
 input[type="submit"], button {
@@ -71,6 +71,11 @@ input[type="submit"], button {
 
   select, form, button {
     margin-bottom: .75em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
   }
 }
 
@@ -124,6 +129,29 @@ input[type="submit"], button {
 
 a:hover .badges span {
   text-decoration: none;
+}
+
+span.badge-wav {
+  background: #caab08;
+  color: #715202;
+}
+
+span.badge-vst, span.badge-vsti {
+  background: #1f7e9e;
+}
+
+span.badge-vst3, span.badge-vsti3 {
+  background: #40b4da;
+}
+
+span.badge-vsti, span.badge-vsti3 {
+  font-style: italic;
+}
+
+span.badge-aax, span.badge-aui, span.badge-au,
+span.badge-rex2, span.badge-rtas, span.badge-exs {
+  color: gray;
+  background: #2d2d2d;
 }
 
 .pager {

@@ -45,7 +45,7 @@ export default function ItemList(props) {
           key={`item-${index}`}
           title={item.title}
           date={item.date}
-          setSrc={() => props.setPreviewSrc(item.img)} />)}
+          selectItem={() => props.setItem(item)} />)}
     </ul>
   );
 }
@@ -62,7 +62,7 @@ function Item(props) {
 
   return (
     <li>
-      <a href="#">
+      <a href="#" onClick={props.selectItem}>
         <p id="item-title">{title} <span>• {props.date}</span></p>
 
         <p id="item-systems">
@@ -74,8 +74,11 @@ function Item(props) {
         </p>
 
         <p className="badges">
-          {formats.map((str, index) => 
-            <span key={`badge-${index}`}>{str}</span>)}
+          {formats.map((str, index) => {
+            const formatName = str.toLowerCase().trim();
+
+            return <span className={`badge-${formatName}`} key={`badge-${index}`}>{str}</span>;
+          })}
         </p>
       </a>
     </li>

@@ -11,7 +11,7 @@ function App() {
   const ctx = React.useContext(AppContext);
   const [site, setSite] = useState('vstorrent.org');
   const [pageNumber, setPageNumber] = useState(1);
-  const [previewSrc, setPreviewSrc] = useState('');
+  const [item, setItem] = useState({});
 
   return (
     <div className={`theme-${ctx.theme}`}>
@@ -21,16 +21,16 @@ function App() {
         <div className="frame">
           <Sidebar 
             site={site} 
-            setSite={setSite} 
-            previewSrc={previewSrc} />
+            setSite={setSite}
+            selectedItem={item} />
 
           <section id="content">
             <Loader />
             
             <ItemList 
               site={site} 
-              pageNumber={pageNumber} 
-              setPreviewSrc={setPreviewSrc} />
+              pageNumber={pageNumber}
+              setItem={setItem} />
 
             <Pager 
               pageNumber={pageNumber} 
