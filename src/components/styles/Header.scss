@@ -79,7 +79,26 @@ $bgr-color: #333;
 
 .theme-two {
   #main-header h1 {
-    filter: hue-rotate(195deg) brightness(.75);
+    filter: unset;
+    background: unset;
+    animation: unset;
+    color: #fff;
+
+    &:after {
+      width: 15em;
+      height: 4em;
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: -1em;
+      left: -1em;
+      background-image: url(/img/solo.png);
+      background-size: 58%;
+      background-repeat: no-repeat;
+      z-index: -20;
+      // filter: hue-rotate(-195deg);
+      pointer-events: none;
+    }
   }
 }
 
