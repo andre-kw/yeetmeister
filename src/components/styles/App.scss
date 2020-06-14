@@ -163,8 +163,10 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
 }
 
 .pager {
+  padding: .5em;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 
   button {
     background: transparent;
@@ -177,6 +179,26 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
       text-decoration: underline;
     }
   }
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div:nth-child(2) {
+    flex: 3;
+    text-align: center;
+  }
+
+  & > div:nth-child(3) {
+    text-align: right;
+  }
+}
+
+#pager-search input[type="text"] {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+  max-width: 3em;
 }
 
 .loader {
