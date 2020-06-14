@@ -21,8 +21,6 @@ export default function Pager(props) {
 
   return (
     <div className={`pager ${props.hide ? 'hide' : ''}`}>
-      <div><small>hey</small></div>
-
       <div className="pager-center">
         {props.pageNumber > 1 && [prevBtn, <span>... </span>]}
         <form id="pager-search" onSubmit={inputPageNumber}>
@@ -30,10 +28,6 @@ export default function Pager(props) {
         </form>
         <span>...</span>
         <button type="button" onClick={e => props.setPageNumber(props.pageNumber + 1)}>{props.pageNumber + 1}</button>
-      </div>
-
-      <div>
-        
       </div>
     </div>
   );

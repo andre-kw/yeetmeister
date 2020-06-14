@@ -9,7 +9,7 @@ export default function ItemPreview(props) {
       
       {hasItem && (
         <div>
-          <a className="btn" href={`https://google.com/search?q=${props.item.title.replace(' ', '+')}`} target="_blank">Details</a>
+          <a className="btn btn-google" href={`https://google.com/search?q=${props.item.title.replace(' ', '+')}`} target="_blank">Search</a>
           <button type="button">Magnet</button>
         </div>
       )}

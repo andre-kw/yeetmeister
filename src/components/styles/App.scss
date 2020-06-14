@@ -22,7 +22,7 @@ input, select, button, .btn {
   text-decoration: none;
 
   &:focus, &:active {
-    border-color: #2baf2b;
+    border-color: #dadada;
     text-decoration: underline;
   }
 }
@@ -53,6 +53,15 @@ input[type="submit"], button {
 
 .frame {
   display: flex;
+}
+
+.btn-google {
+  background-image: url(/img/google.png);
+  background-size: 75%;
+  background-position: center 58%;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-color: #f5f5f5;
 }
 
 #main-header h1 {
@@ -96,7 +105,7 @@ input[type="submit"], button {
   background: #232323;
   position: relative;
   z-index: 5;
-  border: 1px solid #c5c086;
+  border: 1px solid #737373;
   border-bottom-width: 8px;
   border-radius: 1px 1px 0 10px;
   color: #fff;
@@ -152,6 +161,11 @@ span.badge-vst3, span.badge-vsti3 {
   background: #40b4da;
 }
 
+span.badge-kontakt {
+  background: #2e632e;
+  color: #fff;
+}
+
 span.badge-vsti, span.badge-vsti3 {
   font-style: italic;
 }
@@ -183,10 +197,6 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
   & > div {
     flex: 1;
   }
-
-  & > div:nth-child(3) {
-    text-align: right;
-  }
 }
 
 .pager-center {
@@ -201,6 +211,7 @@ span.badge-rex2, span.badge-rtas, span.badge-exs {
   margin: 0 .5em;
   background-color: transparent;
   color: #fff;
+  text-align: center;
 }
 
 .loader {
