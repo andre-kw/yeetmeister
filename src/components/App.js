@@ -12,6 +12,15 @@ function App() {
   const [site, setSite] = useState('vstorrent.org');
   const [pageNumber, setPageNumber] = useState(1);
   const [item, setItem] = useState({});
+  const {theme} = ctx;
+
+  React.useEffect(() => {
+    ctx.setTheme(localStorage.getItem('theme') || 'one');
+  }, []);
+
+  React.useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <div className={`theme-${ctx.theme}`}>
