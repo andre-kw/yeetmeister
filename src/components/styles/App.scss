@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
 
 html {
-  background: #badccd;
+  background: linear-gradient(180deg, #fff68c, #eae6d1);
+  height: 100vh;
 }
 
 body {
@@ -39,6 +40,10 @@ hr {
   border-bottom: 1px solid gray;
 }
 
+input[type="submit"], button {
+  cursor: pointer;
+}
+
 
 
 .frame {
@@ -50,7 +55,7 @@ hr {
   font-family: 'Arvo', serif;
   font-size: 9em;
   margin: 0 0 -.5em 0;
-  text-shadow: 6px -2px 0px #022d11;
+  text-shadow: 6px -2px 0px #212121;
 }
 
 #sidebar {
@@ -68,10 +73,10 @@ hr {
 
 #content {
   max-height: 70vh;
-  flex: 5;
+  flex: 5 1;
   overflow: scroll;
-  background: rgb(31, 82, 60);
-  border: 1px solid #10462f;
+  background: #232323;
+  border: 1px solid #c5c086;
   border-bottom-width: 8px;
   border-radius: 1px 1px 0 10px;
   color: #fff;
