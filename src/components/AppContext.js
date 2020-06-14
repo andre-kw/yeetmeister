@@ -11,7 +11,7 @@ export default AppContext;
 export function AppProvider(props) {
   const [loading, setLoading] = useState(false);
   const [theme, setTheme] = useState('one');
-  const themes = ['one', 'two'];
+  const themes = ['one', 'two', 'three'];
 
   const value = {
     loading,

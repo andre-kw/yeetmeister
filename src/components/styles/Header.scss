@@ -82,3 +82,9 @@ $bgr-color: #333;
     filter: hue-rotate(195deg) brightness(.75);
   }
 }
+
+.theme-three {
+  #main-header h1 {
+    filter: hue-rotate(195deg);
+  }
+}

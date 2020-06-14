@@ -10,14 +10,6 @@
     border-bottom: 1px solid #353535;
     font-size: 0.7em;
 
-    p {
-      margin: 0;
-
-      &:nth-child(3) {
-        width: 100%;
-      }
-    }
-
     a {
       margin: 0;
       text-decoration: none;
@@ -32,6 +24,18 @@
       &:hover, &:focus {
         text-decoration: underline;
       }
+    }
+  }
+
+  p {
+    margin: 0;
+
+    &:nth-child(3) {
+      width: 100%;
+    }
+
+    &.item-badges {
+      margin-top: .5em;
     }
   }
 }
