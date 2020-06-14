@@ -45,6 +45,8 @@ export default function ItemList(props) {
 
 function Item(props) {
   return (
-    <li>{props.title}</li>
+    <li>
+      <a href="#">{props.title}</a>
+    </li>
   );
 }
