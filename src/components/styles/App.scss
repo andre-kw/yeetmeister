@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
-
-html {
-  background: linear-gradient(180deg, #fff68c, #eae6d1);
-  height: 100vh;
-}
+// @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500&family=Playfair+Display+SC:ital@1&display=swap');
 
 body {
   margin: 0;
@@ -44,6 +40,11 @@ input[type="submit"], button {
   cursor: pointer;
 }
 
+#root > div {
+  width: 100vw;
+  height: 100vh;
+}
+
 
 
 .frame {
@@ -52,10 +53,12 @@ input[type="submit"], button {
 }
 
 #main-header h1 {
-  font-family: 'Arvo', serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 9em;
-  margin: 0 0 -.5em 0;
-  text-shadow: 6px -2px 0px #212121;
+  margin: -0.25em 0 -0.5em 3%;
+  font-weight: 100;
+  z-index: -5;
+  position: relative;
 }
 
 #sidebar {
@@ -76,6 +79,7 @@ input[type="submit"], button {
   flex: 5 1;
   overflow: scroll;
   background: #232323;
+  z-index: 5;
   border: 1px solid #c5c086;
   border-bottom-width: 8px;
   border-radius: 1px 1px 0 10px;
@@ -92,5 +96,37 @@ input[type="submit"], button {
 
   input[type="submit"] {
     flex: 1;
+  }
+}
+
+.icon {
+  margin-left: .5em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-size: cover;
+}
+
+.icon-win { background-image: url(/img/win.png) }
+.icon-osx { background-image: url(/img/osx.png) }
+.icon-linux { background-image: url(/img/linux.png) }
+
+
+.badges span {
+  margin-right: .5em;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+a:hover .badges span {
+  text-decoration: none;
+}
+
+.theme-two {
+  background: linear-gradient(#e2e8ff, #e2e8ff);
+  
+  #main-header, #sidebar {
+    filter: hue-rotate(180deg);
   }
 }

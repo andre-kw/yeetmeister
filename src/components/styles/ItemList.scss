@@ -4,15 +4,24 @@
   margin: 0;
 
   li {
-    padding: 3px 8px;
+    padding: 3px 8px 8px;
     border-bottom: 1px solid #353535;
     font-size: 0.7em;
 
+    p {
+      margin: 0;
+
+      &:nth-child(3) {
+        width: 100%;
+      }
+    }
+
     a {
       margin: 0;
-      max-width: 55%;
       text-decoration: none;
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
       &:link, &:visited {
         color: inherit;
@@ -23,4 +32,13 @@
       }
     }
   }
+}
+
+#item-title span {
+  color: gray;
+}
+
+#item-systems {
+  height: 1.5em;
+  min-width: 1em;
 }

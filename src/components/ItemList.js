@@ -36,17 +36,43 @@ export default function ItemList(props) {
   
   return (
     <ul id="item-list">
-      {items.map(item => 
+      {items.map((item, index) => 
         <Item
-          title={item.title} />)}
+          key={`item-${index}`}
+          title={item.title}
+          date={item.date} />)}
     </ul>
   );
 }
 
 function Item(props) {
+  const formatsStr = props.title.match(/\([^()]*\)/g, '');
+  const systemsStr = props.title.match(/\[[^()]*\]/g, '');
+  const formats = formatsStr ? formatsStr[0].slice(1, -1).split(',') : [];
+  const systems = systemsStr ? systemsStr[0].slice(1, -1).split('.') : [];
+
+  const title = props.title
+    .replace(/\[[^()]*\]/, '')
+    .replace(/\([^()]*\)/, '');
+
   return (
     <li>
-      <a href="#">{props.title}</a>
+      <a href="#">
+        <p id="item-title">{title} <span>• {props.date}</span></p>
+
+        <p id="item-systems">
+          {systems.map((str, index) => {
+            const osName = str.split(' ')[0].toLowerCase();
+
+            return <span className={`icon icon-${osName}`} key={`icon-${index}`}></span>;
+          })}
+        </p>
+
+        <p className="badges">
+          {formats.map((str, index) => 
+            <span key={`badge-${index}`}>{str}</span>)}
+        </p>
+      </a>
     </li>
   );
 }

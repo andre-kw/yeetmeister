@@ -13,7 +13,8 @@ $bgr-color: #333;
 }
 
 .shine {
-	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #20eaa9)) 0 0 no-repeat;
+  // background: #0a0a0a -webkit-gradient(linear, left top, right top, from(#000), to(#e8dc05), color-stop(0.5, #eabe20)) 0 0 no-repeat;
+  background: #ff8b8b -webkit-gradient(linear, left top, right top, from(#ff8b8b), to(#e8dc05), color-stop(0.5, #eabe20)) 0 0 no-repeat;
 	background-size: 150px;
 	color: $text-color;
 	background-clip: text;
@@ -24,7 +25,7 @@ $bgr-color: #333;
 }
 
 .chrome {
-	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+  background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
 	background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
   background-size: 200px;
 	color: $text-color;
@@ -36,11 +37,8 @@ $bgr-color: #333;
 }
 
 @keyframes shine {
-	0%, 10% {
-		background-position: -1000px;
-	}
-	20% {
-		background-position: top left;
+	0% {
+    background-position: -5em;
 	}
 	90% {
 		background-position: top right;
