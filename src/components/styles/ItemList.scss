@@ -42,8 +42,12 @@
   }
 }
 
-.item-title span {
-  color: gray;
+.item-title {
+  max-width: 85%;
+
+  span {
+    color: gray;
+  }
 }
 
 .item-systems {
